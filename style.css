@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.items {
+    min-height: 98vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.item {
+    background-color: var(--bright-orange);
+    min-height: 25rem;
+    max-width: 17rem;
+    padding: 2.5rem;
+    position: relative;
+    
+}
+
+.item .image {
+    margin-bottom: 1.5rem;
+}
+
+.item h1 {
+    color: var(--background-headings-buttons);
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size:2.3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.item p {
+    color: var(--paragraphs);
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    cursor: pointer;
+    position: absolute;
+    background-color: var(--background-headings-buttons);
+    color: var(--bright-orange);
+    border: none;
+    border-radius: 2rem;
+    padding: .8rem 2rem;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--background-headings-buttons);
+    border: 1px solid var(--background-headings-buttons);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.bg-sedans {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.bg-suv {
+    background-color: var(--dark-cyan);
+}
+
+.bg-suv .btn {
+    color: var(--dark-cyan);
+}
+
+.bg-suv .btn:hover {
+    color: var(--background-headings-buttons);
+}
+
+.bg-luxury {
+    background-color: var(--very-dark-cyan);
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.bg-luxury .btn {
+    color: var(--very-dark-cyan);
+}
+
+.bg-luxury .btn:hover {
+    color: var(--background-headings-buttons);
+}
+
+@media screen and (max-width: 768px) {
+    .items {
+        display: flex;
+        flex-direction: column;
+        padding: 5rem 0;
+    }
+    .bg-sedans {
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 0;
+    }
+    .bg-luxury {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+
+}
